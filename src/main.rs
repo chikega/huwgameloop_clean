@@ -1,6 +1,6 @@
 /* Gary Chike                     04/02/2023  */
 // Edited 05/21/2023   SublimeText on Lubuntu
-// Edited 08/02/2023   reviewing with Git  
+// Edited 08/02/2023   reviewing with Git, added else if, else 
 
 use std::io::stdin;
 use std::io::stdout;
@@ -17,7 +17,7 @@ loop {
     stdin()
         .read_line(&mut input)
             .expect("> failed");
-    if input.trim().is_empty() {}
+    if input.trim().is_empty() {} // 08/02/2023 deleted 'continue'
     else if input.trim().to_lowercase() == "q" {break;}
     else {println!("> You wrote '{}'", input.trim() );}
 }
