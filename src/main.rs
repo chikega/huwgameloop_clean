@@ -17,9 +17,9 @@ loop {
     stdin()
         .read_line(&mut input)
             .expect("> failed");
-    if input.trim().is_empty() {continue;}
-    if input.trim().to_lowercase() == "q" {break;}
-    println!("> You wrote '{}'", input.trim() );
+    if input.trim().is_empty() {}
+    else if input.trim().to_lowercase() == "q" {break;}
+    else {println!("> You wrote '{}'", input.trim() );}
 }
 println!("> Goodbye!");
 sleep(Duration::from_secs(2));
