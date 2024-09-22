@@ -10,18 +10,19 @@ use std::time::Duration;
 use std::thread::sleep;
 
 fn main() {
-const Q: &str = "Q"; // 09/22/2024 
-println!("> press <q> to exit..");
-loop {
-    print!("> "); stdout().flush().unwrap();
-    let mut input = String::new();
-    stdin()
-        .read_line(&mut input)
-            .expect("> Failed to read line");
-    if input.trim().is_empty() {} // 08/02/2023 deleted 'continue', Rust expects a 'block' - {}
-    else if input.trim().to_uppercase() == Q {break;} // 09/22/2024 changed to_uppercase() and added Q
-    else {println!("> You wrote '{}'", input.trim() );}
-}
-println!("> Goodbye!");
-sleep(Duration::from_secs(2));
+    const Q: &str = "Q"; // 09/22/2024
+    
+    println!("> press <q> to exit..");
+    loop {
+        print!("> "); stdout().flush().unwrap();
+        let mut input = String::new();
+        stdin()
+            .read_line(&mut input)
+                .expect("> Failed to read line");
+        if input.trim().is_empty() {} // 08/02/2023 deleted 'continue', Rust expects a 'block' - {}
+        else if input.trim().to_uppercase() == Q {break;} // 09/22/2024 changed to_uppercase() and added Q
+        else {println!("> You wrote '{}'", input.trim() );}
+    }
+    println!("> Goodbye!");
+    sleep(Duration::from_secs(2));
 }
