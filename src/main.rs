@@ -10,9 +10,9 @@ use std::time::Duration;
 use std::thread::sleep;
 
 fn main() {
-    const Q: &str = "Q"; // 09/22/2024
+    const Q: &str = "Q"; // explicit type annotation with const
     
-    println!("> press <q> to exit..");
+    println!("> press <Q> to exit..");
     loop {
         print!("> "); stdout().flush().unwrap();
         let mut input = String::new();
