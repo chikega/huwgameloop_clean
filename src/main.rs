@@ -4,7 +4,9 @@
 // Edited 03/02/2024   added sleep, Duration, thread::sleep
 // Edited 09/22/2024   added const Q, to_uppercase()
 // Edited: 06/23/2025  did away w/ if-else block and created
-// two if statements instead, added 'continue' back in
+// two if statements instead, added 'continue' back in. 
+// Also added '.block()' after reviewing pop-up description and
+// suggestions for macro 'print!()'
 
 use std::io::{stdin, stdout, Write}; // 03/02/2024
 
@@ -16,7 +18,7 @@ fn main() {
     
     println!("> press <Q> to exit..");
     loop {
-        print!("> "); stdout().flush().unwrap();
+        print!("> "); stdout().lock().flush().unwrap();
         let mut input = String::new();
         stdin()
             .read_line(&mut input)
